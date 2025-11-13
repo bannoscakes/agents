@@ -7,7 +7,8 @@ A collection of reusable agents that can be integrated into any project. This re
 ```
 agents/
 ├── python/          # Python-based agents
-├── javascript/      # JavaScript/TypeScript agents
+├── javascript/      # JavaScript/Node.js agents
+├── typescript/      # TypeScript/Supabase agents
 ├── docker/          # Dockerized agents (language-agnostic)
 ├── examples/        # Integration examples
 └── docs/           # Documentation
@@ -52,13 +53,18 @@ docker run -p 8080:8080 your-agents:chat-agent
 - **Chat Agent** - LLM-powered conversational agent
 - **Data Processor** - Data transformation and analysis
 - **Task Scheduler** - Automated task execution
-- **Web Scraper** - Intelligent web scraping
+- **Cake Production Reporter** - Production reporting for bakeries
 
 ### JavaScript Agents
 - **Chat Agent** - LLM-powered conversational agent
 - **API Agent** - RESTful API interaction handler
-- **Event Processor** - Event-driven automation
-- **File Watcher** - File system monitoring
+
+### TypeScript/Supabase Agents
+- **Cake Production Reporter** - Bi-weekly production reports with Supabase integration
+  - Works with PostgreSQL database
+  - Runs as Supabase Edge Function
+  - React frontend components included
+  - Scheduled reporting twice a week
 
 ### Docker Agents
 - **Multi-language Support** - Run any agent as a service
