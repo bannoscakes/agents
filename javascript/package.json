@@ -1,0 +1,19 @@
+{
+  "name": "reusable-agents-js",
+  "version": "0.1.0",
+  "description": "Reusable JavaScript agents for various tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "agents",
+    "automation",
+    "ai",
+    "tasks"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
