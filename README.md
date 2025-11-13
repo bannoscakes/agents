@@ -60,11 +60,34 @@ docker run -p 8080:8080 your-agents:chat-agent
 - **API Agent** - RESTful API interaction handler
 
 ### TypeScript/Supabase Agents
+
+#### Production & Operations
 - **Cake Production Reporter** - Bi-weekly production reports with Supabase integration
   - Works with PostgreSQL database
   - Runs as Supabase Edge Function
   - React frontend components included
   - Scheduled reporting twice a week
+  - BOM/Inventory integration for ingredient requirements
+
+#### Quality Control
+- **Cake Quality Control Agent** - AI vision-powered quality control system
+  - Claude Vision / OpenAI GPT-4 Vision
+  - OCR for reading text on cakes
+  - Spelling verification
+  - Quality scoring (0-10)
+  - Auto-approval workflow
+  - Issue detection and flagging
+  - Cost: ~$0.01 per cake
+
+#### Webhook Processing
+- **Webhook Order Processor** - Intelligent webhook-to-order conversion
+  - **THREE methods:** Deterministic (FREE), Hybrid (smart), AI-powered
+  - Liquid template-based extraction (production-ready)
+  - Multi-cake order splitting (#B21345-A, #B21345-B)
+  - Accessory handling (stays with first cake)
+  - Supabase Edge Function deployment
+  - React monitoring dashboard
+  - Cost: FREE to ~$0.0001 per order
 
 ### Docker Agents
 - **Multi-language Support** - Run any agent as a service
