@@ -23,6 +23,11 @@ export class AIExtractor {
   private liquidTemplate: string;
 
   constructor(config: AIExtractorConfig) {
+    // Validate API key upfront
+    if (!config.apiKey || config.apiKey.trim() === '') {
+      throw new Error('ANTHROPIC_API_KEY is required for AIExtractor. Set the ANTHROPIC_API_KEY environment variable.');
+    }
+
     this.config = {
       apiKey: config.apiKey,
       liquidTemplate: config.liquidTemplate || '',
@@ -69,6 +74,16 @@ export class AIExtractor {
       }
 
       const data = await response.json();
+
+      // Safely access API response
+      if (!data.content || !Array.isArray(data.content) || data.content.length === 0) {
+        throw new Error('Invalid API response: missing content array');
+      }
+
+      if (!data.content[0].text) {
+        throw new Error('Invalid API response: missing text in content');
+      }
+
       const content = data.content[0].text;
 
       // Extract JSON from response
