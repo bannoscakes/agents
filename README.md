@@ -50,16 +50,144 @@ docker run -p 8080:8080 your-agents:chat-agent
 ## 📦 Available Agents
 
 ### Python Agents
+
+#### Core Agents
 - **Chat Agent** - LLM-powered conversational agent
 - **Data Processor** - Data transformation and analysis
 - **Task Scheduler** - Automated task execution
 - **Cake Production Reporter** - Production reporting for bakeries
 
+#### E-commerce Agents
+- **Shopify Chatbot Agent** - AI customer support for Shopify stores
+  - Product inquiries and recommendations
+  - Order tracking and status updates
+  - Shipping and returns information
+  - Smart escalation to human support
+  - Shopify API integration
+  - Embeddable web widget included
+  - Cost: ~$0.015 per conversation
+
+#### Business Automation Agents
+- **Email Automation Agent** - Intelligent email handling
+  - Auto-classify emails (order, complaint, question, spam)
+  - Sentiment analysis
+  - Priority detection
+  - Auto-draft responses
+  - Extract order numbers, dates, amounts
+  - Smart escalation rules
+  - Multi-language support
+
+- **Social Media Content Generator** - Create engaging social posts
+  - Instagram, Facebook, Twitter/X, LinkedIn support
+  - Auto-generate captions and hashtags
+  - Platform-specific formatting
+  - Best posting time suggestions
+  - Brand voice customization
+  - Multi-platform campaigns
+
+- **FAQ Generator Agent** - Auto-generate FAQs from documentation
+  - Extract common questions from content
+  - Generate clear answers
+  - Update FAQs from customer inquiries
+  - JSON output format
+
+- **Marketing Copy Generator** - Professional marketing content
+  - Product descriptions
+  - Email campaigns
+  - Ad copy (Google, Facebook, etc.)
+  - Landing page copy
+  - SEO-optimized content
+  - Multiple tone options
+
+#### Bakery-Specific Agents
+- **Recipe Management Agent** - Intelligent recipe management
+  - Scale recipes to any serving size
+  - Ingredient substitution suggestions
+  - Allergen detection and warnings
+  - Nutrition calculation
+  - Waste reduction optimization
+  - Recipe search and organization
+
+#### Development & Analytics Agents
+- **Code Review Agent** - Automated code review
+  - Security vulnerability detection
+  - Performance analysis
+  - Best practices enforcement
+  - Style guide compliance
+  - Bug detection
+  - Supports multiple languages
+
+- **Sales Forecasting Agent** - Predict sales trends
+  - Historical data analysis
+  - Trend detection
+  - Seasonality patterns
+  - 30-day forecasts
+  - Anomaly detection
+  - Confidence scoring
+
+- **Customer Segmentation Agent** - Segment customers intelligently
+  - RFM analysis (Recency, Frequency, Monetary)
+  - Behavioral segmentation
+  - Marketing recommendations per segment
+  - Churn prediction
+  - Lifetime value estimation
+
+#### Voice Agents
+- **Voice Transcription Agent** - Speech-to-text conversion
+  - OpenAI Whisper, Google Speech-to-Text, AssemblyAI support
+  - Speaker diarization (who said what)
+  - Timestamp support
+  - Multi-language support (50+ languages)
+  - Cost: ~$0.006/minute
+
+- **Voice Synthesis Agent** - Text-to-speech conversion
+  - OpenAI TTS, ElevenLabs, Google TTS, AWS Polly support
+  - Multiple voice options (6+ voices per provider)
+  - Adjustable speech speed (0.25x to 4x)
+  - Multi-language support
+  - Cost: ~$0.015/1K characters
+
+- **Voice Chat Agent** - Full voice-based conversational AI
+  - Complete voice conversation pipeline (listen → think → speak)
+  - Combines STT + LLM + TTS
+  - Conversation history management
+  - Mix and match providers
+  - Text input with voice output option
+  - Cost: ~$0.014 per conversation turn
+
 ### JavaScript Agents
+
+#### Core Agents
 - **Chat Agent** - LLM-powered conversational agent
 - **API Agent** - RESTful API interaction handler
 
+#### E-commerce Agents
+- **Shopify Chatbot Agent** - AI customer support with Node.js backend
+  - Express.js server example included
+  - Real-time order and product lookups
+  - Embeddable widget for Shopify themes
+
+#### Voice Agents
+- **Voice Transcription Agent** - Speech-to-text with OpenAI Whisper
+- **Voice Synthesis Agent** - Text-to-speech with multiple providers
+
 ### TypeScript/Supabase Agents
+
+#### E-commerce Agents
+- **Shopify Chatbot Agent** - Serverless Shopify support with Supabase
+  - Deploy as Supabase Edge Function
+  - TypeScript with full type safety
+  - Shopify Admin API integration
+  - Conversation history in Supabase
+  - Perfect for scalable deployments
+
+#### Voice Agents
+- **Voice Chat Agent** - Full voice conversational AI for Supabase Edge Functions
+  - TypeScript implementation with full type safety
+  - Supabase Edge Function ready
+  - Voice input/output for web applications
+  - Real-time voice conversations
+  - Combines OpenAI Whisper + Anthropic Claude + OpenAI TTS
 
 #### Production & Operations
 - **Cake Production Reporter** - Bi-weekly production reports with Supabase integration

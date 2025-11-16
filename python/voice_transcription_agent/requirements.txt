@@ -1,0 +1,10 @@
+# Choose one or more providers:
+
+# OpenAI Whisper
+openai>=1.0.0
+
+# Google Speech-to-Text
+# google-cloud-speech>=2.0.0
+
+# AssemblyAI
+# assemblyai>=0.17.0

@@ -1,0 +1,13 @@
+# Choose one or more providers:
+
+# OpenAI TTS
+openai>=1.0.0
+
+# ElevenLabs
+# elevenlabs>=0.2.0
+
+# Google Text-to-Speech
+# google-cloud-texttospeech>=2.0.0
+
+# AWS Polly
+# boto3>=1.28.0

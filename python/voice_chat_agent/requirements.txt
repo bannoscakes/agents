@@ -1,0 +1,14 @@
+# Core requirements
+openai>=1.0.0
+anthropic>=0.18.0
+
+# Optional providers
+# elevenlabs>=0.2.0
+# google-cloud-speech>=2.0.0
+# google-cloud-texttospeech>=2.0.0
+# assemblyai>=0.17.0
+# boto3>=1.28.0
+
+# Optional audio playback
+# pygame>=2.5.0
+# playsound>=1.3.0
