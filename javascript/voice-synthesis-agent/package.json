@@ -1,0 +1,24 @@
+{
+  "name": "voice-synthesis-agent",
+  "version": "1.0.0",
+  "description": "Text-to-speech conversion agent supporting multiple providers",
+  "main": "VoiceSynthesisAgent.js",
+  "scripts": {
+    "test": "node VoiceSynthesisAgent.js"
+  },
+  "keywords": [
+    "text-to-speech",
+    "tts",
+    "synthesis",
+    "voice",
+    "agent"
+  ],
+  "peerDependencies": {
+    "openai": ">=4.0.0"
+  },
+  "optionalDependencies": {
+    "elevenlabs": ">=0.8.0",
+    "@google-cloud/text-to-speech": ">=5.0.0",
+    "aws-sdk": ">=2.0.0"
+  }
+}

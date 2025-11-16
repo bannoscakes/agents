@@ -50,16 +50,55 @@ docker run -p 8080:8080 your-agents:chat-agent
 ## 📦 Available Agents
 
 ### Python Agents
+
+#### Core Agents
 - **Chat Agent** - LLM-powered conversational agent
 - **Data Processor** - Data transformation and analysis
 - **Task Scheduler** - Automated task execution
 - **Cake Production Reporter** - Production reporting for bakeries
 
+#### Voice Agents
+- **Voice Transcription Agent** - Speech-to-text conversion
+  - OpenAI Whisper, Google Speech-to-Text, AssemblyAI support
+  - Speaker diarization (who said what)
+  - Timestamp support
+  - Multi-language support (50+ languages)
+  - Cost: ~$0.006/minute
+
+- **Voice Synthesis Agent** - Text-to-speech conversion
+  - OpenAI TTS, ElevenLabs, Google TTS, AWS Polly support
+  - Multiple voice options (6+ voices per provider)
+  - Adjustable speech speed (0.25x to 4x)
+  - Multi-language support
+  - Cost: ~$0.015/1K characters
+
+- **Voice Chat Agent** - Full voice-based conversational AI
+  - Complete voice conversation pipeline (listen → think → speak)
+  - Combines STT + LLM + TTS
+  - Conversation history management
+  - Mix and match providers
+  - Text input with voice output option
+  - Cost: ~$0.014 per conversation turn
+
 ### JavaScript Agents
+
+#### Core Agents
 - **Chat Agent** - LLM-powered conversational agent
 - **API Agent** - RESTful API interaction handler
 
+#### Voice Agents
+- **Voice Transcription Agent** - Speech-to-text with OpenAI Whisper
+- **Voice Synthesis Agent** - Text-to-speech with multiple providers
+
 ### TypeScript/Supabase Agents
+
+#### Voice Agents
+- **Voice Chat Agent** - Full voice conversational AI for Supabase Edge Functions
+  - TypeScript implementation with full type safety
+  - Supabase Edge Function ready
+  - Voice input/output for web applications
+  - Real-time voice conversations
+  - Combines OpenAI Whisper + Anthropic Claude + OpenAI TTS
 
 #### Production & Operations
 - **Cake Production Reporter** - Bi-weekly production reports with Supabase integration

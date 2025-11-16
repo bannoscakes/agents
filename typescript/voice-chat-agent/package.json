@@ -1,0 +1,28 @@
+{
+  "name": "voice-chat-agent",
+  "version": "1.0.0",
+  "description": "Full voice-based conversational AI agent for TypeScript/Supabase",
+  "main": "VoiceChatAgent.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "ts-node VoiceChatAgent.ts"
+  },
+  "keywords": [
+    "voice",
+    "chat",
+    "agent",
+    "supabase",
+    "typescript",
+    "speech-to-text",
+    "text-to-speech",
+    "conversational-ai"
+  ],
+  "dependencies": {
+    "openai": "^4.0.0",
+    "@anthropic-ai/sdk": "^0.18.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
