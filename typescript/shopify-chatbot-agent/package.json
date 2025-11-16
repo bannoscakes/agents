@@ -1,0 +1,25 @@
+{
+  "name": "shopify-chatbot-agent",
+  "version": "1.0.0",
+  "description": "Shopify customer support chatbot for TypeScript/Supabase",
+  "main": "ShopifyChatbotAgent.ts",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "supabase functions deploy shopify-chat"
+  },
+  "keywords": [
+    "shopify",
+    "chatbot",
+    "supabase",
+    "typescript",
+    "customer-support"
+  ],
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.18.0",
+    "@supabase/supabase-js": "^2.39.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}

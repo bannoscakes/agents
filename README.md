@@ -57,6 +57,16 @@ docker run -p 8080:8080 your-agents:chat-agent
 - **Task Scheduler** - Automated task execution
 - **Cake Production Reporter** - Production reporting for bakeries
 
+#### E-commerce Agents
+- **Shopify Chatbot Agent** - AI customer support for Shopify stores
+  - Product inquiries and recommendations
+  - Order tracking and status updates
+  - Shipping and returns information
+  - Smart escalation to human support
+  - Shopify API integration
+  - Embeddable web widget included
+  - Cost: ~$0.015 per conversation
+
 #### Voice Agents
 - **Voice Transcription Agent** - Speech-to-text conversion
   - OpenAI Whisper, Google Speech-to-Text, AssemblyAI support
@@ -86,11 +96,25 @@ docker run -p 8080:8080 your-agents:chat-agent
 - **Chat Agent** - LLM-powered conversational agent
 - **API Agent** - RESTful API interaction handler
 
+#### E-commerce Agents
+- **Shopify Chatbot Agent** - AI customer support with Node.js backend
+  - Express.js server example included
+  - Real-time order and product lookups
+  - Embeddable widget for Shopify themes
+
 #### Voice Agents
 - **Voice Transcription Agent** - Speech-to-text with OpenAI Whisper
 - **Voice Synthesis Agent** - Text-to-speech with multiple providers
 
 ### TypeScript/Supabase Agents
+
+#### E-commerce Agents
+- **Shopify Chatbot Agent** - Serverless Shopify support with Supabase
+  - Deploy as Supabase Edge Function
+  - TypeScript with full type safety
+  - Shopify Admin API integration
+  - Conversation history in Supabase
+  - Perfect for scalable deployments
 
 #### Voice Agents
 - **Voice Chat Agent** - Full voice conversational AI for Supabase Edge Functions
