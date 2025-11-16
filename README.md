@@ -67,6 +67,71 @@ docker run -p 8080:8080 your-agents:chat-agent
   - Embeddable web widget included
   - Cost: ~$0.015 per conversation
 
+#### Business Automation Agents
+- **Email Automation Agent** - Intelligent email handling
+  - Auto-classify emails (order, complaint, question, spam)
+  - Sentiment analysis
+  - Priority detection
+  - Auto-draft responses
+  - Extract order numbers, dates, amounts
+  - Smart escalation rules
+  - Multi-language support
+
+- **Social Media Content Generator** - Create engaging social posts
+  - Instagram, Facebook, Twitter/X, LinkedIn support
+  - Auto-generate captions and hashtags
+  - Platform-specific formatting
+  - Best posting time suggestions
+  - Brand voice customization
+  - Multi-platform campaigns
+
+- **FAQ Generator Agent** - Auto-generate FAQs from documentation
+  - Extract common questions from content
+  - Generate clear answers
+  - Update FAQs from customer inquiries
+  - JSON output format
+
+- **Marketing Copy Generator** - Professional marketing content
+  - Product descriptions
+  - Email campaigns
+  - Ad copy (Google, Facebook, etc.)
+  - Landing page copy
+  - SEO-optimized content
+  - Multiple tone options
+
+#### Bakery-Specific Agents
+- **Recipe Management Agent** - Intelligent recipe management
+  - Scale recipes to any serving size
+  - Ingredient substitution suggestions
+  - Allergen detection and warnings
+  - Nutrition calculation
+  - Waste reduction optimization
+  - Recipe search and organization
+
+#### Development & Analytics Agents
+- **Code Review Agent** - Automated code review
+  - Security vulnerability detection
+  - Performance analysis
+  - Best practices enforcement
+  - Style guide compliance
+  - Bug detection
+  - Supports multiple languages
+
+- **Sales Forecasting Agent** - Predict sales trends
+  - Historical data analysis
+  - Trend detection
+  - Seasonality patterns
+  - 30-day forecasts
+  - Anomaly detection
+  - Confidence scoring
+
+- **Customer Segmentation Agent** - Segment customers intelligently
+  - RFM analysis (Recency, Frequency, Monetary)
+  - Behavioral segmentation
+  - Marketing recommendations per segment
+  - Churn prediction
+  - Lifetime value estimation
+
 #### Voice Agents
 - **Voice Transcription Agent** - Speech-to-text conversion
   - OpenAI Whisper, Google Speech-to-Text, AssemblyAI support
