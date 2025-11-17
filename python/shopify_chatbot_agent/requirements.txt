@@ -1,0 +1,11 @@
+# LLM Providers (choose one)
+anthropic>=0.18.0
+# openai>=1.0.0
+
+# Shopify integration (optional)
+ShopifyAPI>=12.0.0
+
+# Web framework (for deployment)
+# flask>=3.0.0
+# fastapi>=0.104.0
+# gunicorn>=21.0.0

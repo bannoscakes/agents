@@ -1,0 +1,23 @@
+{
+  "name": "voice-transcription-agent",
+  "version": "1.0.0",
+  "description": "Speech-to-text conversion agent supporting multiple providers",
+  "main": "VoiceTranscriptionAgent.js",
+  "scripts": {
+    "test": "node VoiceTranscriptionAgent.js"
+  },
+  "keywords": [
+    "speech-to-text",
+    "transcription",
+    "whisper",
+    "voice",
+    "agent"
+  ],
+  "peerDependencies": {
+    "openai": ">=4.0.0"
+  },
+  "optionalDependencies": {
+    "@google-cloud/speech": ">=6.0.0",
+    "assemblyai": ">=4.0.0"
+  }
+}

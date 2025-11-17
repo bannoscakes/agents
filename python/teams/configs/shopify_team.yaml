@@ -1,0 +1,66 @@
+# Shopify Store Team Configuration
+# This configuration sets up a complete team for managing a Shopify store
+
+team_type: shopify_store
+
+leader_config:
+  store_name: "Artisan Bakery"
+  store_url: "artisan-bakery.myshopify.com"
+  shopify_api_key: "${SHOPIFY_API_KEY}"
+  llm_api_key: "${LLM_API_KEY}"
+
+members:
+  # Customer Support Agent
+  - name: CustomerSupportAgent
+    type: shopify_chatbot
+    capabilities:
+      - customer_support
+      - order_tracking
+    config:
+      shopify_store_url: "artisan-bakery.myshopify.com"
+      shopify_access_token: "${SHOPIFY_ACCESS_TOKEN}"
+      store_name: "Artisan Bakery"
+      brand_voice: "warm, friendly, and artisanal"
+      llm_api_key: "${LLM_API_KEY}"
+      store_policies:
+        returns: "7-day return policy on packaged goods"
+        shipping: "Free shipping on orders over $50"
+        custom_orders: "48-hour notice required for custom cakes"
+
+  # Email Automation Agent
+  - name: EmailAgent
+    type: email_automation
+    capabilities:
+      - email_marketing
+      - email_automation
+    config:
+      llm_api_key: "${LLM_API_KEY}"
+      company_name: "Artisan Bakery"
+
+  # Social Media Generator
+  - name: SocialMediaAgent
+    type: social_media_generator
+    capabilities:
+      - social_media
+      - content_generation
+    config:
+      llm_api_key: "${LLM_API_KEY}"
+      brand_voice: "artisanal, community-focused, passionate about baking"
+
+  # Sales Forecasting Agent
+  - name: ForecastingAgent
+    type: sales_forecasting
+    capabilities:
+      - sales_forecasting
+      - analytics
+    config:
+      llm_api_key: "${LLM_API_KEY}"
+
+  # Customer Segmentation Agent
+  - name: SegmentationAgent
+    type: customer_segmentation
+    capabilities:
+      - customer_segmentation
+      - analytics
+    config:
+      llm_api_key: "${LLM_API_KEY}"

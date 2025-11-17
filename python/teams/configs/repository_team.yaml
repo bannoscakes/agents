@@ -1,0 +1,39 @@
+# Repository Management Team Configuration
+# This configuration sets up a complete team for managing a software repository
+
+team_type: repository
+
+leader_config:
+  repo_name: "my-awesome-project"
+  repo_owner: "mycompany"
+  llm_api_key: "${LLM_API_KEY}"
+
+members:
+  # Code Review Agent
+  - name: CodeReviewAgent
+    type: code_review
+    capabilities:
+      - code_review
+      - security
+    config:
+      llm_api_key: "${LLM_API_KEY}"
+      focus_areas:
+        - security
+        - performance
+        - best_practices
+        - code_style
+
+  # Documentation Agent (FAQ Generator)
+  - name: DocumentationAgent
+    type: faq_generator
+    capabilities:
+      - documentation
+      - faq_generation
+    config:
+      llm_api_key: "${LLM_API_KEY}"
+
+  # Note: In production, you would add more agents:
+  # - TestingAgent (runs pytest, jest, etc.)
+  # - SecurityAgent (dependency scanning, SAST)
+  # - IssueTriageAgent (labels, prioritizes issues)
+  # - PerformanceAgent (profiling, benchmarking)
