@@ -222,6 +222,90 @@ docker run -p 8080:8080 your-agents:chat-agent
 - **Easy Deployment** - Deploy anywhere with Docker
 - **Scalable** - Scale agents independently
 
+## 🎯 Multi-Agent Teams Framework
+
+**NEW:** Hierarchical agent teams with leader coordination for complex workflows!
+
+Instead of single agents working independently, create teams where a **leader agent** coordinates multiple **specialist agents** to accomplish complex goals.
+
+### Built-in Teams
+
+#### 1. **Shopify Store Team** (`python/teams/shopify_store_team/`)
+Complete e-commerce automation:
+- **Leader** coordinates: Customer Support, Email Marketing, Social Media, Sales Forecasting, Customer Segmentation
+- **Use cases:** "Run marketing campaign", "Daily operations", "Weekly analytics"
+- **Cost:** ~$0.10-$0.20 per workflow
+
+```python
+from teams.team_factory import create_team
+
+leader = create_team('teams/configs/shopify_team.yaml')
+result = leader.execute_goal("marketing_campaign", context={
+    'product': 'New Product',
+    'platforms': ['instagram', 'facebook']
+})
+```
+
+#### 2. **Repository Management Team** (`python/teams/repository_team/`)
+Automated software development workflows:
+- **Leader** coordinates: Code Review, Documentation, Testing, Security Auditing
+- **Use cases:** "Review PR", "Pre-release checklist", "Security audit"
+- **Cost:** ~$0.02-$0.20 per workflow
+
+```python
+leader = create_team('teams/configs/repository_team.yaml')
+result = leader.execute_goal("review_pr", context={
+    'pr_number': 123,
+    'code': code_changes,
+    'language': 'python'
+})
+```
+
+#### 3. **Bakery Operations Team** (`python/teams/bakery_team/`)
+Complete bakery management:
+- **Leader** coordinates: Recipe Management, Production Planning, Quality Control, Customer Service, Forecasting
+- **Use cases:** "Plan production", "Custom cake order", "Check allergens"
+- **Cost:** ~$0.05-$0.30 per workflow
+
+```python
+leader = create_team('teams/configs/bakery_team.yaml')
+result = leader.execute_goal("plan_production", context={
+    'sales_data': historical_sales,
+    'recipes': recipes_to_scale
+})
+```
+
+### Team Framework Features
+
+- ✅ **Hierarchical Delegation** - Leader plans, delegates, and aggregates
+- ✅ **Load Balancing** - Automatically distributes tasks
+- ✅ **Task Management** - Track pending, in-progress, completed, failed tasks
+- ✅ **Team Metrics** - Monitor success rates and performance
+- ✅ **YAML Configuration** - Build teams from config files
+- ✅ **Strategic Recommendations** - AI-powered team optimization
+
+### Quick Start with Teams
+
+```python
+# Method 1: Use configuration file
+from teams.team_factory import create_team
+leader = create_team('teams/configs/shopify_team.yaml')
+
+# Method 2: Programmatic setup
+from teams.shopify_store_team import ShopifyStoreLeader
+leader = ShopifyStoreLeader(config={'store_name': 'My Store'})
+leader.register_agent('ChatBot', chatbot_instance, ['customer_support'])
+
+# Execute goals
+result = leader.execute_goal("marketing_campaign", context={...})
+
+# Monitor team
+status = leader.get_team_status()
+recommendations = leader.get_recommendations()
+```
+
+See `python/teams/README.md` for complete documentation on creating custom teams.
+
 ## 💡 Usage Examples
 
 See the [examples/](examples/) directory for complete integration examples:
