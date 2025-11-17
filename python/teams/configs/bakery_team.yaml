@@ -1,0 +1,52 @@
+# Bakery Operations Team Configuration
+# This configuration sets up a complete team for managing bakery operations
+
+team_type: bakery
+
+leader_config:
+  bakery_name: "Artisan Bakery & Café"
+  specialties:
+    - sourdough
+    - wedding cakes
+    - pastries
+  llm_api_key: "${LLM_API_KEY}"
+
+members:
+  # Recipe Management Agent
+  - name: RecipeAgent
+    type: recipe_management
+    capabilities:
+      - recipe_scale
+      - recipe_substitute
+      - recipe_allergens
+      - recipe_nutrition
+      - recipe_optimize
+    config:
+      llm_api_key: "${LLM_API_KEY}"
+
+  # Sales Forecasting Agent
+  - name: ForecastingAgent
+    type: sales_forecasting
+    capabilities:
+      - sales_forecasting
+    config:
+      llm_api_key: "${LLM_API_KEY}"
+
+  # Customer Service Agent
+  - name: CustomerServiceAgent
+    type: shopify_chatbot
+    capabilities:
+      - customer_support
+    config:
+      store_name: "Artisan Bakery & Café"
+      brand_voice: "warm, artisanal, and welcoming"
+      llm_api_key: "${LLM_API_KEY}"
+      store_policies:
+        returns: "7-day return policy on packaged goods"
+        custom_orders: "48-hour notice required for custom cakes"
+        delivery: "Free delivery on orders over $50"
+
+  # Note: In production, you would add:
+  # - ProductionPlanningAgent (BOM, scheduling)
+  # - QualityControlAgent (inspection, defect detection)
+  # - OrderProcessingAgent (webhook processing)
