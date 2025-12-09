@@ -131,16 +131,26 @@ async function handleProcess(supabaseClient: any, body: ProcessRequest) {
       extractedOrders = extractor.splitOrder(extracted);
 
     } else if (method === 'ai') {
+      const apiKey = Deno.env.get('ANTHROPIC_API_KEY');
+      if (!apiKey) {
+        throw new Error('ANTHROPIC_API_KEY environment variable is required for AI extraction method');
+      }
+
       const extractor = new AIExtractor({
-        apiKey: Deno.env.get('ANTHROPIC_API_KEY') ?? '',
+        apiKey,
       });
       const extracted = await extractor.extract(webhook.payload);
       extractedOrders = extractor.splitOrder(extracted);
       aiUsed = true;
 
     } else { // hybrid
+      const apiKey = Deno.env.get('ANTHROPIC_API_KEY');
+      if (!apiKey) {
+        throw new Error('ANTHROPIC_API_KEY environment variable is required for Hybrid extraction method');
+      }
+
       const extractor = new HybridExtractor({
-        apiKey: Deno.env.get('ANTHROPIC_API_KEY') ?? '',
+        apiKey,
       });
       const results = await extractor.process(webhook.payload);
       extractedOrders = results.map(r => r.order);
@@ -193,7 +203,10 @@ async function handleProcess(supabaseClient: any, body: ProcessRequest) {
           .from('order_carts')
           .insert(cartItems);
 
-        if (cartError) console.error('Failed to save cart items:', cartError);
+        if (cartError) {
+          console.error('Failed to save cart items:', cartError);
+          throw new Error(`Failed to save cart items: ${cartError.message}`);
+        }
       }
 
       savedOrders.push(savedOrder);

@@ -51,6 +51,11 @@ export class HybridExtractor {
   private config: Required<HybridExtractorConfig>;
 
   constructor(config: HybridExtractorConfig) {
+    // Validate API key upfront
+    if (!config.apiKey || config.apiKey.trim() === '') {
+      throw new Error('ANTHROPIC_API_KEY is required for HybridExtractor. Set the ANTHROPIC_API_KEY environment variable.');
+    }
+
     this.config = {
       apiKey: config.apiKey,
       liquidTemplate: config.liquidTemplate || '',
