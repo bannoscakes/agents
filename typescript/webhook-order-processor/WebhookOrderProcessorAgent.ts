@@ -450,7 +450,7 @@ IMPORTANT:
 
     if (error) {
       console.error('Failed to save order cart:', error);
-      // Don't throw - order is already saved
+      throw new Error(`Failed to save order cart items: ${error.message}`);
     }
   }
 

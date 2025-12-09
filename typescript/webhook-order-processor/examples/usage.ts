@@ -115,8 +115,13 @@ async function example1_deterministic() {
 async function example2_ai() {
   console.log('\n=== Example 2: AI Extractor ===\n');
 
+  const apiKey = Deno.env.get('ANTHROPIC_API_KEY');
+  if (!apiKey) {
+    throw new Error('ANTHROPIC_API_KEY environment variable is required for AI extraction');
+  }
+
   const extractor = new AIExtractor({
-    apiKey: Deno.env.get('ANTHROPIC_API_KEY') ?? '',
+    apiKey,
     model: 'claude-3-haiku-20240307',
   });
 
@@ -142,8 +147,13 @@ async function example2_ai() {
 async function example3_hybrid() {
   console.log('\n=== Example 3: Hybrid Extractor (RECOMMENDED) ===\n');
 
+  const apiKey = Deno.env.get('ANTHROPIC_API_KEY');
+  if (!apiKey) {
+    throw new Error('ANTHROPIC_API_KEY environment variable is required for Hybrid extraction');
+  }
+
   const extractor = new HybridExtractor({
-    apiKey: Deno.env.get('ANTHROPIC_API_KEY') ?? '',
+    apiKey,
     requireCustomerName: true,
     requireDeliveryDate: true,
     useAIForValidation: true,
@@ -204,8 +214,13 @@ async function example4_production() {
 
   console.log(`Found ${webhooks?.length || 0} pending webhooks\n`);
 
+  const apiKey = Deno.env.get('ANTHROPIC_API_KEY');
+  if (!apiKey) {
+    throw new Error('ANTHROPIC_API_KEY environment variable is required for Hybrid extraction');
+  }
+
   const extractor = new HybridExtractor({
-    apiKey: Deno.env.get('ANTHROPIC_API_KEY') ?? '',
+    apiKey,
   });
 
   for (const webhook of webhooks || []) {
@@ -327,8 +342,13 @@ async function example5_recommendation() {
 async function example6_batch_with_stats() {
   console.log('\n=== Example 6: Batch Processing with Stats ===\n');
 
+  const apiKey = Deno.env.get('ANTHROPIC_API_KEY');
+  if (!apiKey) {
+    throw new Error('ANTHROPIC_API_KEY environment variable is required for Hybrid extraction');
+  }
+
   const extractor = new HybridExtractor({
-    apiKey: Deno.env.get('ANTHROPIC_API_KEY') ?? '',
+    apiKey,
   });
 
   const stats = {
